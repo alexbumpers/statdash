@@ -1,5 +1,5 @@
 class CPU:
-    current_cpu_utilization = 0
+    current_cpu_utilization = 0.00
     average_cpu_utilization_one_hour = 0
 
     def __init__(self, current_cpu_utilization, average_cpu_utilization_one_hour):
