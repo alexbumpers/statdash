@@ -8,13 +8,15 @@ from models.process.Process import *
 
 from venv.serializers.stats.cpu.cpu_serializer import Cpu_Serializer
 from venv.serializers.stats.memory.memory_serializer import Memory_Serializer
+from venv.serializers.stats.process.pid_stats_serializer import Pid_Stats_Serializer
 from venv.stats.process.pid_service import Pid_Service
 
 
 def main():
     # print(Memory_Serializer.serialize_memory())
-    print(Pid_Service.get_all_memory_usage_for_all_pids())
+    print(Pid_Service.get_pid_stats_all_pids())
     print(Cpu_Serializer.serialize_cpu())
+    print(Pid_Stats_Serializer.serialize_pid_stats(2988))
 if __name__ == "__main__":
     main()
 
